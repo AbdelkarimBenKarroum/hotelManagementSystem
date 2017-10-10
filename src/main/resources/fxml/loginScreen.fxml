@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="755.0" style="-fx-background-color: #3d6098; -fx-opacity: 0.8;" stylesheets="@../styles/loginscreen.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdelkarim.content.loginModule.LoginScreenController">
+   <children>
+      <AnchorPane id="loginPanel" fx:id="rootPane" layoutX="417.0" layoutY="48.0" prefHeight="383.0" prefWidth="306.0" style="-fx-background-radius: 10px;">
+         <children>
+            <JFXTextField fx:id="userName" focusColor="#3aa8f1" labelFloat="true" layoutX="26.0" layoutY="111.0" prefHeight="34.0" prefWidth="254.0" promptText="Username" unFocusColor="#929294">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="#3aa8f1" labelFloat="true" layoutX="26.0" layoutY="182.0" prefHeight="34.0" prefWidth="254.0" promptText="Password" unFocusColor="#929294">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton id="loginBtn" fx:id="loginBtn" layoutX="26.0" layoutY="270.0" onAction="#Login" prefHeight="41.0" prefWidth="254.0" ripplerFill="#62d8f8" text="Login" textFill="#e7e7e7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="64.0" layoutY="351.0" prefHeight="34.0" prefWidth="171.0" text="Forget password" textFill="#807e7e" underline="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="-38.0" prefHeight="86.0" prefWidth="88.0" style="-fx-background-color: #4cb5f5; -fx-background-radius: 100;" textFill="#fffefe">
+               <font>
+                  <Font name="Bodoni MT" size="23.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f5f3f3" glyphName="USER" size="35" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" prefHeight="456.0" prefWidth="379.0">
+         <children>
+            <ImageView fitHeight="463.0" fitWidth="394.0" layoutX="-14.0" layoutY="-7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/hotelUnderWater.jpg" />
+               </image>
+               <effect>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="189.0" prefHeight="49.0" prefWidth="351.0" text="Welcome to Our Hotel Manager" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="dragBar" onMouseDragged="#loginFormDragged" onMousePressed="#mousePressedForLocation" prefHeight="24.0" prefWidth="755.0" />
+      <Label id="closeBtn" fx:id="closeBtn" alignment="CENTER" layoutX="720.0" onMouseClicked="#closeWindow" prefHeight="34.0" prefWidth="35.0" text="X">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <GaussianBlur radius="0.0" />
+   </effect>
+</AnchorPane>

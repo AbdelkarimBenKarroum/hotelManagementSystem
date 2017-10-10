@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="520.0" prefWidth="698.0" style="-fx-background-color: #e7e7e7; -fx-background-radius: 2;" stylesheets="@../styles/guestview.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdelkarim.content.guestView.GuestViewController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="461.0" style="-fx-background-color: #e7e7e7;">
+         <children>
+            <JFXButton fx:id="listBtn" alignment="CENTER" graphicTextGap="8.0" onAction="#getListOfGuests" prefHeight="67.0" prefWidth="188.0" styleClass="DashBoardBtn" text="Guests List" textAlignment="CENTER" textFill="#f8f8f8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView id="dashIcon" glyphName="LIST" size="25" />
+               </graphic>
+               <effect>
+                  <DropShadow color="#b9b4b4" />
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="newGuestBtn" alignment="CENTER" graphicTextGap="8.0" onAction="#addGuestAction" prefHeight="65.0" prefWidth="200.0" styleClass="DashBoardBtn" text="New Guest" textAlignment="CENTER" textFill="#f8f8f8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView id="dashIcon" glyphName="USER_PLUS" size="25" />
+               </graphic>
+               <effect>
+                  <DropShadow color="#b9b4b4" />
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="archiveBtn" alignment="CENTER" graphicTextGap="8.0" onAction="#archivedGuests" prefHeight="65.0" prefWidth="200.0" styleClass="DashBoardBtn" text="Archive" textAlignment="CENTER" textFill="#f8f8f8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView id="dashIcon" glyphName="FOLDER" size="25" />
+               </graphic>
+               <effect>
+                  <DropShadow color="#b9b4b4" />
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </VBox.margin>
+      </HBox>
+      <TableView fx:id="table" prefHeight="394.0" prefWidth="461.0" style="-fx-background-color: ;" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="ID" minWidth="0.0" prefWidth="150.0" text="ID" />
+          <TableColumn fx:id="firstName" minWidth="0.0" prefWidth="150.0" text="First Name" />
+            <TableColumn fx:id="lastName" minWidth="0.0" prefWidth="150.0" text="Last Name" />
+            <TableColumn fx:id="dateOfBirth" minWidth="0.0" prefWidth="150.0" text="Date of birth" />
+            <TableColumn fx:id="phoneNumber" minWidth="0.0" prefWidth="150.0" text="Phone number" />
+            <TableColumn fx:id="gender" minWidth="0.0" prefWidth="150.0" style="-fx-background-color: ;" text="Gender" />
+        </columns>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <effect>
+            <DropShadow color="#028bf0" height="6.17" radius="2.585" spread="0.62" width="6.17" />
+         </effect>
+      </TableView>
+   </children>
+   <effect>
+      <DropShadow color="#cdcbcb" />
+   </effect>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

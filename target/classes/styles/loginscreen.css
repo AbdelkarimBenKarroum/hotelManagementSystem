@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#AnchorPane {
+  
+
+}
+#loginBtn{
+    -fx-background-color: #213159;
+}
+#loginPanel{
+    -fx-background-color: #ececec;
+}
+#closeBtn:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+#closeBtn{
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    
+}

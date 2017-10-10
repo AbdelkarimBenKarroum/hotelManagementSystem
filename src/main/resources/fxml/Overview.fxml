@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="overviewPane" alignment="TOP_CENTER" prefHeight="484.0" prefWidth="585.0" style="-fx-background-color: #e7e7e7; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdelkarim.content.overview.OverviewController">
+   <children>
+      <Label alignment="CENTER" prefHeight="33.0" prefWidth="111.0" text="Overview" textFill="#06b6fc">
+         <VBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="386.0" prefWidth="421.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="386.0" prefWidth="247.0" style="-fx-background-color: white; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="38.0" prefWidth="90.0" text="Rooms" textFill="#131961" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <FontAwesomeIconView id="dashIcon" glyphName="BED" size="30" text="" />
+                           </graphic>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" graphicTextGap="0.0" onMouseClicked="#viewAllRooms" prefHeight="36.0" prefWidth="83.0" text="View All" textFill="#eb0000" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f80101" glyphName="EYE" size="15" wrappingWidth="19.28571319580078" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="152.0" text="Total Rooms" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="totalRooms" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="0.0" prefHeight="36.0" prefWidth="23.0" text="30" textFill="#1e1d1d" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="152.0" text="Occupied Rooms" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="OccupiedRooms" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="0.0" prefHeight="36.0" prefWidth="24.0" text="8" textFill="#eb0000" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="152.0" text="total Available Rooms" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="availableRooms" alignment="CENTER" graphicTextGap="0.0" prefHeight="36.0" prefWidth="20.0" text="22" textFill="#0d41fc" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="156.0" text="Available Regular Rooms" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="regularRooms" alignment="CENTER" graphicTextGap="0.0" prefHeight="36.0" prefWidth="23.0" text="7" textFill="#049e0c" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="160.0" text="Av.double-bed Rooms" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="doubleBedRooms" alignment="CENTER" graphicTextGap="0.0" prefHeight="36.0" prefWidth="33.0" text="7" textFill="#eb0000" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="95.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="158.0" text="Av.king sized-bed Rooms" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="kingSizedRooms" alignment="CENTER" graphicTextGap="0.0" prefHeight="36.0" prefWidth="31.0" text="8" textFill="#eb6b00" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="95.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow color="#9e9d9d" spread="0.56" />
+               </effect>
+            </VBox>
+            <VBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="378.0" prefWidth="246.0" style="-fx-background-color: white; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="38.0" prefWidth="90.0" text="Guests" textFill="#131961" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView id="dashIcon" glyphName="USERS" size="28" wrappingWidth="32.14285659790039" />
+                           </graphic>
+                        </Label>
+                        <Label alignment="CENTER" graphicTextGap="0.0" onMouseClicked="#viewAllGuests" prefHeight="36.0" prefWidth="83.0" text="View All" textFill="#eb0000" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f80101" glyphName="EYE" size="15" wrappingWidth="19.28571319580078" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="152.0" text="Number of guests" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="guestTotal" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="0.0" prefHeight="36.0" prefWidth="23.0" text="8" textFill="#5fb206" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="152.0" text="Men" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="guestMen" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="0.0" prefHeight="36.0" prefWidth="24.0" text="4" textFill="#0310a1" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="152.0" text="Women" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="guestsWomen" alignment="CENTER" graphicTextGap="0.0" prefHeight="36.0" prefWidth="22.0" text="4" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="197.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="152.0" text="Checking out today" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="CheckingToday" alignment="CENTER" graphicTextGap="0.0" prefHeight="36.0" prefWidth="31.0" text="0" textFill="#eb0000" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="7.0" prefWidth="197.0" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="285.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="156.0" text="Unspecified checking outs" textFill="#0a0a0a" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="unspecifiedChecking" alignment="CENTER" graphicTextGap="0.0" prefHeight="36.0" prefWidth="21.0" text="5" textFill="#05a6c3" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow color="#9e9d9d" spread="0.56" />
+               </effect>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <effect>
+      <DropShadow color="#222020" height="29.9" radius="13.7075" spread="0.17" width="26.93" />
+   </effect>
+</VBox>

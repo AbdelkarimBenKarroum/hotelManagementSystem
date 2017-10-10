@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+#registerLabel{
+    
+/*    -fx-border-style: hidden hidden hidden solid;
+    -fx-border-color: blue;
+    -fx-border-width: 0 0 0 4;*/
+}
+#loginPanel{
+    -fx-background-color: rgba(0, 0, 0, 0.5)
+}
+#closeBtn{
+    -fx-background-color:  #f04b4c;
+    -fx-cursor: hand;
+}

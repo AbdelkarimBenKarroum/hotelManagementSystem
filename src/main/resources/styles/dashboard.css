@@ -1,0 +1,29 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #ececec;
+}
+.DashBoardBtn{
+    -fx-background-color:  white;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #213159;
+}
+
+.DashBoardBtn:hover{
+    -fx-text-fill: #4cb5f5;
+    -fx-border-color:#ff3300;
+    -fx-border-width: 0 0 4 0;
+}
+#dashIcon{
+    -fx-fill: #213159;
+}
+#dashIcon:hover{
+    -fx-background-color: black;
+}
+.Header{
+    -fx-background-color: #4cb5f5;
+    -fx-border-color:white;
+    -fx-border-width: 0 0 4 0;
+}

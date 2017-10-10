@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="306.0" prefWidth="238.0" styleClass="mainFxmlClass" stylesheets="@../styles/splash.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdelkarim.content.splashScreen.SplashController">
+   <children>
+      <ImageView fitHeight="236.0" fitWidth="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LodCir1.gif" />
+         </image>
+      </ImageView>
+      <Label id="splashLabel" alignment="CENTER" layoutY="236.0" prefHeight="71.0" prefWidth="238.0" style="-fx-background-color: #3399ff;" text="Hotel Management System" textFill="#fffdfd94">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

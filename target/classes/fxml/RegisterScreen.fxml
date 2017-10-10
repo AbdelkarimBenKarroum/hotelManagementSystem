@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="414.0" style="-fx-background-color: #213159;" styleClass="mainFxmlClass" stylesheets="@../styles/registerscreen.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdelkarim.content.registerModule.RegisterScreenController">
+   <children>
+      <AnchorPane id="loginPanel" fx:id="rootPane" layoutX="58.0" layoutY="88.0" prefHeight="468.0" prefWidth="306.0" style=": ; -fx-background-radius: 10px;" stylesheets="@../styles/registerscreen.css">
+         <children>
+            <JFXTextField fx:id="userNameInput" focusColor="WHITE" labelFloat="true" layoutX="26.0" layoutY="115.0" opacity="0.9" prefHeight="34.0" prefWidth="254.0" promptText="Username" style="-fx-background-color: #e7e7e7; -fx-padding: 0 0 0 10;" unFocusColor="#213159">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label id="registerLabel" alignment="CENTER" layoutX="59.0" layoutY="59.0" prefHeight="49.0" prefWidth="176.0" text="Register" textFill="#fffdfd">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="emailInput" focusColor="WHITE" labelFloat="true" layoutX="26.0" layoutY="176.0" opacity="0.9" prefHeight="34.0" prefWidth="254.0" promptText="Email" style="-fx-background-color: #e7e7e7; -fx-padding: 0 0 0 10;" unFocusColor="#213159">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordInput" focusColor="#fcfcfc" labelFloat="true" layoutX="26.0" layoutY="237.0" opacity="0.9" prefHeight="34.0" prefWidth="254.0" promptText="Password" style="-fx-background-color: #e7e7e7; -fx-padding: 0 0 0 10;" unFocusColor="#213159">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <rotationAxis>
+                  <Point3D z="21.0" />
+               </rotationAxis>
+            </JFXPasswordField>
+            <JFXTextField fx:id="addressInput" focusColor="WHITE" labelFloat="true" layoutX="26.0" layoutY="302.0" opacity="0.9" prefHeight="34.0" prefWidth="254.0" promptText="Address" style="-fx-background-color: #e7e7e7; -fx-padding: 0 0 0 10;" unFocusColor="#213159">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="registerBtn" buttonType="RAISED" layoutX="66.0" layoutY="375.0" onAction="#register" prefHeight="41.0" prefWidth="176.0" ripplerFill="#464646" style="-fx-background-color: #e7e7e7;" text="Register" textFill="#213159">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="146.0" layoutY="30.0" prefHeight="116.0" prefWidth="122.0" style="-fx-background-radius: 100px; -fx-background-color: #104b4c;">
+         <graphic>
+            <FontAwesomeIconView fill="#fffefe" glyphName="USER" size="100" wrappingWidth="78.0" />
+         </graphic>
+      </Label>
+      <Label id="closeBtn" fx:id="closeBtn" alignment="CENTER" layoutX="379.0" layoutY="-4.0" onMouseClicked="#closeWindow" prefHeight="34.0" prefWidth="35.0" text="X" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

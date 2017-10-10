@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="401.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.abdelkarim.content.roomView.RoomViewController">
+   <children>
+      <TableView fx:id="roomTable" editable="true" prefHeight="401.0" prefWidth="437.0" HBox.hgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="150.0" text="ID" />
+            <TableColumn fx:id="price" prefWidth="150.0" text="Price" />
+            <TableColumn fx:id="category" prefWidth="150.0" text="Category" />
+            <TableColumn fx:id="floor" prefWidth="150.0" text="Floor" />
+            <TableColumn fx:id="avail" prefWidth="150.0" text="Availability" />
+        </columns>
+         <effect>
+            <DropShadow color="#807e7d" height="26.93" radius="9.26" spread="0.37" width="12.11" />
+         </effect>
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <VBox alignment="TOP_CENTER" prefHeight="401.0" prefWidth="204.0">
+         <children>
+            <Label id="roomViewBtn" fx:id="newRoom" alignment="CENTER" onMouseClicked="#addNewRoom" prefHeight="55.0" prefWidth="181.0" styleClass="roomViewBtn" stylesheets="@../styles/roomview.css" text="New Room" textFill="#4d4f51">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#cbcccd" height="12.11" radius="6.295" width="15.07" />
+               </effect>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="roomViewBtn" fx:id="editBtn" alignment="CENTER" onMouseClicked="#editRoom" prefHeight="55.0" prefWidth="181.0" styleClass="roomViewBtn" stylesheets="@../styles/roomview.css" text="Edit " textFill="#4d4f51">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#cbcccd" height="12.11" radius="6.295" width="15.07" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label id="roomViewBtn" fx:id="removeBtn" alignment="CENTER" onMouseClicked="#removeRoom" prefHeight="55.0" prefWidth="181.0" styleClass="roomViewBtn" stylesheets="@../styles/roomview.css" text="Remove" textFill="#4d4f51">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#cbcccd" height="12.11" radius="6.295" width="15.07" />
+               </effect>
+            </Label>
+            <Label fx:id="regularBtn" alignment="CENTER" onMouseClicked="#getRegularRooms" prefHeight="55.0" prefWidth="181.0" styleClass="roomViewBtn" stylesheets="@../styles/roomview.css" text="Regular rooms" textFill="#4d4f51">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#cbcccd" height="12.11" radius="6.295" width="15.07" />
+               </effect>
+            </Label>
+            <Label id="roomViewBtn" fx:id="doubleBedBtn" alignment="CENTER" onMouseClicked="#getDoubleBedRooms" prefHeight="55.0" prefWidth="181.0" styleClass="roomViewBtn" stylesheets="@../styles/roomview.css" text="Double Bed rooms" textFill="#4d4f51">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow color="#cbcccd" height="12.11" radius="6.295" width="15.07" />
+               </effect>
+            </Label>
+            <Label id="roomViewBtn" fx:id="kingSizedRoomBtn" alignment="CENTER" onMouseClicked="#getKingSizedRooms" prefHeight="55.0" prefWidth="181.0" styleClass="roomViewBtn" stylesheets="@../styles/roomview.css" text="King sized rooms" textFill="#4d4f51">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#cbcccd" height="12.11" radius="6.295" width="15.07" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>
